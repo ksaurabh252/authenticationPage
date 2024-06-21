@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #666;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 80%;
+      height: 20px;
+      padding: 10px;
+      /* margin-bottom: 5px; */
+      border: 1.5px solid #bdabab;
+      border-radius: 5px;
+      font-size: 16px;
+      display: block;
+      margin: auto;
+
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #aaa;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button[type="submit"] {
+      width: 86%;
+      height: 40px;
+      padding: 10px;
+      margin: auto;
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      display: block;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #23527c;
+    }
+
+    /* .tnc {
+      display: block;
+      margin: auto;
+       font-size: 100px; 
+      text-align: center;
+    } */
+
+    #terms {
+      margin: 0 5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Sign Up</h1>
+    <form method="post" action="/user/register">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="fullName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="password" name="confirmPassword" required>
+      </div>
+      <div class="tnc">
+        Terms and conditions <input type="checkbox" id="terms" name="t&c" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</body>
+
+</html>
